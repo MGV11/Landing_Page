@@ -13,7 +13,7 @@ body {
     margin: 20;
     padding: 20;
 }
-/* COntenedor*/
+/* COntenedor superior*/
 
 .contenedor{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -47,7 +47,6 @@ nav{
     font-size: 30px;
 }
 
-
 .columna {
     position: flex;
     list-style: none;
@@ -65,7 +64,6 @@ li a {
 li.columna:hover {
     background-color: #008849;
 }
-
 
 /* Formulario*/
 
@@ -135,8 +133,6 @@ input[type="submit"] {
     width: 50%;
     margin: 50px auto;
 }
-
-
 
 .boton-registro {
     display: inline-block;
