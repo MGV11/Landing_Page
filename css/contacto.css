@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 20;
+    padding: 20;
+}
+/* COntenedor*/
+
+.contenedor{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px auto;
+    width: 90%;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgba(10, 21, 136, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    outline-style: inset; /* Estilo del contorno */
+    outline-width: 6px; /* Grosor del contorno */
+    outline-color: #dbd2d2; /* Color del contorno */
+}
+
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+
+.columna {
+    position: flex;
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding: 1.5vw;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+li.columna:hover {
+    background-color: #008849;
+}
+
+
+/* Formulario*/
+
+.formulario-container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+h1, h3{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+
+}
+.localizacion {
+    align-items: center;
+}
+
+form {
+    background-color: #3c094d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: rgb(9, 112, 62);
+
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #2b6909;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.informacion-contacto {
+    width: 50%;
+    margin: 50px auto;
+}
+
+
+
+.boton-registro {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton-registro:hover {
+    background-color: #0056b3;
+}
+
+.redesSociales {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+
+.redesSociales li {
+    padding: 5px;
+}
+
+.redesSociales li a {
+    color: white;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.redesSociales li:hover a {
+    color: rgb(14, 135, 54);
+}
+
+@media screen and (min-width: 992px) {
+    .formulario-container {
+        width: 50%;
+    }
+
+    .informacion-contacto {
+        width: 50%;
+    }
+    .contenedor {
+        width: 50%;
+    }
+    .footer {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .formulario-container {
+        width: 80%;
+    }
+    .informacion-contacto {
+        width: 80%;
+    }
+    .contenedor {
+        width: 80%;
+    }
+
+}

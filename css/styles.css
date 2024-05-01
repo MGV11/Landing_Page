@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Besley", serif;
+}
+
+
+
+/* Body index */
+.main{
+    background-image: url(../img/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #68742a;
+    border-radius: 5px;
+    padding: 8px 8px;
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+ }
+
+header .logo:hover {
+    color: #4B5320;
+    background: white;
+    transition: 0.5s;
+}
+
+header .navbar {
+    position: relative;
+    display: flex;
+}
+
+header .navbar li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+header .navbar li a:hover {
+    border-bottom: 5px solid rgb(19, 142, 7);
+    padding: 2px;
+}
+/* Contenido de la web */
+
+.contenido {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.contenido .tituloBox {
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contenido .tituloBox h2 {
+    font-size: 2.8em;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Black Ops One", system-ui;
+}
+
+.contenido .tituloBox h2 span {
+    background: #4b5320;
+    color: white;
+    padding: 0 5px;
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.contenido .tituloBox p {
+    font-size: 1.6em;
+    line-height: 1.5;
+    color: white;
+    font-family: "Black Ops One", system-ui;
+    margin-bottom: 20px;
+}
+
+.contenido .tituloBox a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(22, 13, 193, 0.74);
+    background: white;
+    padding: 10px 20px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+.contenido .tituloBox a:hover {
+    color: white;
+    background: rgb(179, 54, 77);
+    transition: 0.5s;
+}
+
+.contenido .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    margin-top: -15px;
+    z-index: -5;
+}
+
+.contenido .imgBox img {
+    height: 80vh;
+}
+
+.contenido .imgBox img:hover {
+    height: 30vh;
+}
+
+/* Copyright */
+
+.copyright {
+    position: absolute;
+    bottom: 0px;
+    left: 800px;
+    margin-bottom: 20px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    color: white;
+    text-align: center;
+    margin-left: 100px;
+}
+/* redes Sociales */
+
+.redesSociales {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+
+.redesSociales li {
+    padding: 5px;
+}
+
+.redesSociales li a {
+    color: white;
+    font-size: 3em;
+    transition: 0.3s;
+}
+
+.redesSociales li:hover a {
+    color: rgb(14, 135, 54);
+}
+
+/* Opcional  */
+/* circulo */
+
+.circulo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(201, 139, 26, 0.386);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+/* Reponsive */
+
+/* Estilos para dispositivos grandes (992px o más) */
+
+@media only screen and (min-width: 992px) {
+    section {
+        padding: 100px; 
+    }
+}
+
+/* Estilos para dispositivos medianos (576px o más) */
+@media only screen and (max-width: 991px) {
+    header {
+        padding: 10px; /* Ajusta el padding para pantallas medianas */
+    }
+}
+
+/* Estilos para dispositivos pequeños (576px o menos) */
+@media only screen and (max-width: 576px) {
+    section {
+        padding: 30px; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+
+
+
+

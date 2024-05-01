@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body{
+	display: grid;
+	min-height: 100%;
+	/* Para organizar y controlar el diseño utilizando una cuadrícula.
+	 Definir áreas en cuadrícula y asignarles nombres y facilita la colocación*/
+	grid-template-areas: 
+		"header header header header header"
+		"nav nav nav nav nav"
+		"info info info info info"
+		"exp exp exp exp exp"
+		"edu edu edu edu edu"
+		"skills skills skills hobbies hobbies"
+		"footer footer footer footer footer";
+	grid-template-rows: auto auto auto auto auto auto auto;
+	font-family: Roboto;
+	background-color: #9bb796;
+}
+
+header{
+	grid-area: header;
+	display: flex;
+	background-color: rgba(16, 46, 30, 0.897);
+}
+
+#header-img{
+	width: 25%;
+	display: grid;
+	place-items: center;
+}
+
+header img{
+	width: 80%;
+	border: 0.5rem solid #e5e5e5;
+}
+
+nav{
+	grid-area: nav;
+	background-color: #075867;
+}
+
+nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li{
+	padding: 1.5rem;
+}
+
+nav li:hover{
+	background-color: turquoise;
+	transition: background-color 500ms;
+}
+
+nav a{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+nav li:first-of-type, nav li:nth-child(2){
+	display: none;
+}
+
+nav ul, #edu ul, #exp ul, #skills ul, #hobbies ul{
+	list-style-type: none;
+}
+
+header, article, #edu, #exp, #skills, #hobbies, footer{
+	padding: 1rem;
+}
+
+h1, h3, h4, nav, #periodo, #titulo{
+	font-family: Montserrat;
+}
+
+#info div, #edu, #exp{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#info{
+	grid-area: info;
+	padding: 2rem;
+	background-color: #353c3c;
+	color: white;
+}
+
+#info h4{
+	color: white;
+}
+
+#info hr{
+	border: 1px solid white;
+}
+
+#exp{
+	grid-area: exp;
+}
+
+#edu{
+	grid-area: edu;
+}
+
+#skills{
+	grid-area: skills;
+}
+
+#hobbies{
+	grid-area: hobbies;
+}
+
+footer{
+	grid-area: footer;
+	background-color: #075867;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+
+footer img{
+	width: 2rem;
+}
+
+footer a, #info a{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	transition: color, 300ms;
+}
+
+footer a:hover, #info a:hover{
+	color: turquoise;
+}
+
+article{
+	display: flex;
+	background-color: #166796;
+	margin: 1.5rem 0;
+	box-shadow: 0px 3px 20px rgb(88, 179, 183);
+}
+
+.exp-img{
+	width: 25%;
+	padding: 1rem;	
+	display: grid;
+	place-items: center;
+}
+
+.exp-img img{
+	border-radius: 0.5rem;
+	width: 6rem;
+}
+
+.exp-text{
+	width: 75%;
+	padding: 1rem;
+	display: grid;
+	place-items: center;
+}
+
+.periodo{
+	color: black;
+}
+
+.titulo{
+	font-weight: bold;
+	color: black;
+}
+
+.descripcion{
+	color: white;
+}
+
+img{
+	width: 100%;
+	height: auto;
+	transition: opacity 500ms;
+}
+
+img:hover{
+	opacity: 0.8;
+}
+
+h1{
+	font-size: 4rem;
+	color: turquoise;
+}
+
+h3{
+	font-size: 2.5rem;
+	color: #3aa4d2;
+}
+
+h4{
+	color: black;
+	font-size: 1.5rem;
+}
+
+p, #info ul, nav ul{
+	font-size:1.2rem;
+}
+
+hr{
+	border: 1px solid #167190;
+}
+
+.parallax{
+	width: 100;
+	height: auto;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width: 992px){
+	body{
+		grid-template-areas:
+			"header header header header"
+			"nav nav nav nav"
+			"info info info info"
+			"exp exp exp exp"
+			"edu edu edu edu"
+			"skills skills skills hobbies"
+			"footer footer footer footer";
+	}
+
+	h1{
+		font-size: 3rem;
+	}
+
+	h3{
+		font-size: 2rem;
+	}
+
+	h4{
+		font-size: 1.5rem;
+	}	
+
+	nav ul, article, header{
+		flex-direction: column;
+	}
+
+
+	nav:not(:target) li:first-of-type{
+		display: inherit;
+	}
+
+	nav:not(:target) li{
+		display: none;
+	}
+
+	nav:target li{
+		display: inherit;
+	}
+
+	nav:target li:first-of-type{
+		display: none;
+	}
+
+	header img{
+		width: 30%;
+	}
+
+	#header-img, .exp-img{
+		width: 100%;
+	}
+
+	.exp-text{
+		width: 100%;
+		text-align: center;
+	}
+
+	#info div, #edu, #exp{
+		width: 100%;
+	}
+
+	p, #info ul, nav ul{
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 576px){
+	body{
+		grid-template-areas:
+			"header"
+			"nav"
+			"info"
+			"exp"
+			"edu"
+			"skills"
+			"hobbies"
+			"footer";
+	}
+
+	h1{
+		font-size: 1.8rem;
+	}
+
+	h3{
+		font-size: 1rem;
+	}
+}
