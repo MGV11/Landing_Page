@@ -18,7 +18,7 @@
 		<div class="exp-text">
 			<div>
 			<h1>Martin Gonzalez Varela</h1>
-			<h3>48 años</h3>
+			<h3><span id="age"></span> años</h3>
 			</div>
 		</div>	
 	</header>
@@ -265,5 +265,18 @@
 			<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
 		</div>
 	</footer>
+	<script>
+		function calcularEdad(fechaNacimiento) {
+			const hoy = new Date();
+			const nacimiento = new Date(fechaNacimiento);
+			let edad = hoy.getFullYear() - nacimiento.getFullYear();
+			const mes = hoy.getMonth() - nacimiento.getMonth();
+			if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+				edad--;
+			}
+			return edad;
+		}	
+		document.getElementById("age").textContent = calcularEdad("1976-03-07"); // Cambia la fecha de nacimiento aquí
+	</script>
 </body>
 </html>
